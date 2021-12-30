@@ -44,5 +44,6 @@ Assets/scenes/sandboxes/*.unity*
 .vs/vr-lab/v15/Server/sqlite3/storage.ide
 .vs/vr-lab/v15/Server/sqlite3/db.lock
 .vs/
+.idea/
 Assets/SteamVR/
 Assets/SteamVR_Input/
