@@ -192,6 +192,21 @@ namespace Platinio.SDK.EditorTools
         {
             return ((BoolEnum)EditorGUI.EnumPopup(rect , content, value ? BoolEnum.Yes : BoolEnum.No )) == BoolEnum.Yes;
         }
+        
+        public static void FoldoutInspector(GUIContent title, ref bool foldout, int indent , Action drawCallback)
+        {
+            foldout = Foldout(foldout, title , indent);
+
+            if (foldout)
+            {
+                drawCallback();
+            }
+        }
+
+        public static void FoldoutInspector(GUIContent title, ref bool foldout, Action drawCallback)
+        {
+            FoldoutInspector(title, ref foldout, 0, drawCallback);
+        }
     }
     
     public class ConsoleMessage
